@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --blue: #3a86ff;
+    --orange: #f77f01;
+    --light-blue: #00b4d8;
+    --red: #f80404;
+    --background-color: #eff0f4;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--background-color);
+}
+
+.flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble-form {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, .05),
+    25px 35px 20px rgba(0, 0, 0, .05),
+    25px 30px 30px rgba(0, 0, 0, .05),
+    inset -20px -20px 25px rgba(255, 255, 255, .9);
+    transition: .5s;
+    border-radius: 62% 38% 24% 76% / 59% 60% 40% 41%;
+}
+
+.bubble-form:hover {
+    border-radius: 50%;
+}
+
+.bubble-form:before,
+.bubble-form:after {
+    content: '';
+    background: rgba(255, 255, 255, .5);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.bubble-form:before {
+    top: 55px;
+    left: 85px;
+    width: 35px;
+    height: 35px;
+}
+
+.bubble-form:after {
+    width: 15px;
+    height: 15px;
+    top: 87px;
+    left: 110px;
+}
+
+form {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-wrapper {
+    text-align: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px;
+}
+
+.title {
+    color: var(--red);
+    font-size: 1.5em;
+}
+
+.field {
+    width: 100%;
+    position: relative;
+    border-radius: 25px;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, .1),
+    inset -2px -5px 10px rgb(255, 255, 255),
+    15px 15px 10px rgba(0, 0, 0, .05),
+    15px 10px 15px rgba(0, 0, 0, .025);
+}
+
+.field:last-child {
+    width: 120px;
+    background: var(--blue);
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, .1),
+    15px 15px 10px rgba(0, 0, 0, .05),
+    15px 10px 15px rgba(0, 0, 0, .025);
+    transition: .5s;
+}
+
+.field:last-child:hover {
+    width: 150px;
+}
+
+.field::before {
+    content: '';
+    position: absolute;
+    width: 65%;
+    height: 5px;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, .5);
+    border-radius: 10px 15px;
+}
+
+input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
+button {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1em;
+    letter-spacing: .1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.btn {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: .25s;
+    position: absolute;
+}
+
+.btn:hover {
+    border-radius: 50%;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 50%;
+}
+
+.signup {
+    bottom: 10%;
+    left: 20%;
+    width: 80px;
+    height: 80px;
+    background: var(--orange);
+    border-radius: 49% 51% 52% 48% / 63% 59% 41% 37%;
+    box-shadow: inset 10px 10px 10px rgba(247, 127, 0, .05),
+    15px 25px 10px rgba(247, 127, 0, .1),
+    15px 20px 10px rgba(247, 127, 0, .1),
+    inset -10px -10px 25px rgba(255, 255, 255, .5);
+}
+
+.btn.signup::before {
+    width: 10px;
+    height: 10px;
+    top: 15px;
+    left: 20px;
+}
+
+.forget {
+    width: 120px;
+    height: 120px;
+    background: var(--light-blue);
+    top: 10%;
+    right: 10%;
+    border-radius: 44% 56% 65% 35% / 57% 58% 42% 43%;
+    box-shadow: inset 10px 10px 10px rgba(0, 180, 216, .05),
+    15px 25px 10px rgba(0, 180, 216, .1),
+    15px 20px 10px rgba(0, 180, 216, .1),
+    inset -10px -10px 15px rgba(255, 255, 255, .5);
+}
+
+.btn.forget::before {
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: 25px;
+}
